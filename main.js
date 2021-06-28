@@ -16,7 +16,7 @@ playInfo = [{
       "TitleKor": "프로젝트 1917–콜로이드",
       "TitleEng": "Project 1917-Colloid",
       "TeamKor": "테아터라움 - 철학하는 몸",
-      "TeamEng": "Theatrium Body in Philosophy",
+      "TeamEng": "Theaterraum: The Philosophizing Body",
       "Genre": "연극 Theatre",
       "Space": "문화비축기지 Tank6, 서울, 통영",
       "Time": "00:42:40",
@@ -33,7 +33,7 @@ playInfo = [{
       "Genre": "무용 Dance",
       "Space": "절두산 성지 앞 한강공원",
       "Time": "00:20:00",
-      "PlaySrc": "W4ZO3ppHVrg",
+      "PlaySrc": "2MyYihxo0VI",
       "Staff": "출연: 솔문, 율리 (공동 안무) ",
       "TeamInfo": "솔문(김진수)안무가와 율리(권혜인) 안무가가 팀을 결성하여 창작활동을 추구하고 있다. 생명과 평화를 주제로 즉흥춤을 리서치하고 공연하고 있으며 흐르는 물처럼 자연 그대로의 가치관을 지향하고 있다. ",
       "Info": "흐르는 강물처럼 인생 또한 수많은 인연이 연결되어 흘러간다. 흐름이란 거대한 형은 있지만 고정된 실체는 없이 무한한 삶의 윤회를 은유한다. 사람의 인연의 모습을 강의 흐름위에 겹쳐놓아 봄으로서 아름다운 파동을 만들어 또 다른 인연의 흐름을 관객과 엮어가는 즉흥 춤 공연이다. "
@@ -97,11 +97,11 @@ playInfo = [{
    },
    {
       "TitleKor": "한 사람을 위한 자장가",
-      "TitleEng": "Lullaby for One Person",
+      "TitleEng": "Your Own Lullaby",
       "TeamKor": "보이스씨어터 몸MOM소리",
-      "TeamEng": "Voice Theatre MOMSORI",
+      "TeamEng": "MOMSORI",
       "Genre": "복합 Fusion",
-      "Space": "한옥팬션 the 채 ",
+      "Space": "한옥팬션 the 채",
       "Time": "00:30:00",
       "PlaySrc": "8b539QmQwZY",
       "Staff": "출연: 김진영(연출, 작곡), 장희전, 김시연, 김진솔, 기획: 임현진",
@@ -199,7 +199,7 @@ playInfo = [{
       "Genre": "복합 Fusion",
       "Space": "실외",
       "Time": "00:04:15",
-      "PlaySrc": "W4ZO3ppHVrg",
+      "PlaySrc": "kIO8Ft7ScV0",
       "Staff": "출연: 박건우, 박린, 원민재, 미정(배우) ",
       "TeamInfo": "시안아림은 포크, 팝 장르의 음악을 통해 행복해지기 보다는 행복하지 못함을 위로하는 노래를 하고자 한다. ",
       "Info": "미미의 세상은 침전과 무기력, 초라함이 있는 세상이다. 곡이 지칭하고 있는 ‘미미’를 형상화해 그의 뒤를 따라가며 웅크려 누운 채 가라앉아도 괜찮을 ‘미미의 세상’으로 관객들을 초대하고자 한다. "
@@ -207,7 +207,7 @@ playInfo = [{
    {
       "TitleKor": "장벽을 넘어",
       "TitleEng": "Let's break the wall",
-      "TeamKor": "자유로운 새들(아시아 미디어 컬쳐팩토리 기획)",
+      "TeamKor": "자유로운 새들(아시아미디어컬쳐팩토리 기획)",
       "TeamEng": "Free birds",
       "Genre": "복합 Fusion",
       "Space": "방글라데시 '사가마' 극장",
@@ -231,7 +231,7 @@ playInfo = [{
       "Info": "의사 안중근은 2019년 6월 대한민국 임시정부 수립 100주년을 기념하고 3.1정신을 계승하여 6월 호국보훈의 달 특별한 의미를 기리고자 의사 안중근 공연을 기획하게 되었습니다. 근대사 안중근이라는 위인을 통하여 이 시대를 살아가는 젊은이들에게 새로운 역사의식을 일깨우는 계기로 학교 및 청소년센터, 요양시설 등 많은 기관들의 협조와 성원으로 순회공연을 연중 프로젝트로 삼아 의욕 있는 활동을 가졌습니다. 이것이야말로 사회공헌활동을 통한 자아실현이라는 보람도 갖게 되고 맘껏 자신을 펼쳐 보이는 시니어들의 다양한 연극공연활동 모습에서 왕성한 청춘의 열기를 되찾아 가고 있음을 느껴 봅니다. “당신의 전성기는 아직 오지 않았다!” "
    },
    {
-      "TitleKor": "몸 춤, 꽃으로 피어나다",
+      "TitleKor": "몸, 춤, 꽃으로 피어나다",
       "TitleEng": "Body and Dance, Blooming as Flowers",
       "TeamKor": "지혜의 밭",
       "TeamEng": "Wisdom Field ",
@@ -522,8 +522,32 @@ function endGuide() {
    }, 2000);
 }
 
+function selectEnding() {
+   var endingWindow = document.querySelector(".ebutton");
+   var endingBtn = document.querySelector(".ending-btn");
+   var returnBtn = document.querySelector(".return-btn");
+
+   endingWindow.classList.replace("m-fadeOut", "m-fadeIn");
+
+   endingBtn.addEventListener("click", function () {
+      // Hide editor screen and buttons
+      container.style.visibility = "hidden";
+      endingWindow.style.visibility = "hidden";
+
+      startEnding();
+   }, false);
+
+   returnBtn.addEventListener("click", function () {
+      console.log("return to start!");
+      if (unityEditor != null) {
+         unityEditor.SendMessage("Base", "ToStartPosition");
+         unityEditor.SendMessage("Player", "EditSpeed", 70);
+         endingWindow.classList.replace("m-fadeIn", "m-fadeOut");
+      }
+   }, false)
+}
+
 function startEnding() {
-   container.style.visibility = "hidden"
    var containerEl = document.createElement("div");
    var vidEl = document.createElement("video");
    containerEl.appendChild(vidEl);
