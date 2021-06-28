@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>VIA Festival 2021 - virtual maze</title>
+   <link rel="shortcut icon" href="TemplateData/favicon.ico">
+   <link rel="stylesheet" href="TemplateData/style_main.css">
+   <link rel="stylesheet" href="TemplateData/fontello/css/fontello.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=1600 height=700></canvas>
+      <div id="unity-loading-bar">
+         <div id="unity-logo"></div>
+         <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+         </div>
+      </div>
+   </div>
+   <div class="head-container">
+      <div class="eguide01 m-fadeOut">축하합니다! 출구를 찾으셨습니다.</div>
+      <div class="eguide02 m-fadeOut">나가기 전에, 못 본 공연은 없는지 확인해보세요.</div>
+   </div>
+   <!--flower object container-->
+   <div class="flower-container">
+      <div class="test-btn" onclick="startEnding();">TEST<br>btn</div>
+      <!-- <div class="flower" id="flower01" onclick="this.style.visibility='hidden';"> -->
+      <div class="flower m-fadeOut">
+         <img class="img-petal1" src="./Img/rose_petal01.png">
+         <img class="img-petal2" src="./Img/rose_petal02.png">
+         <img class="img-flower" src="./Img/rose_flower.png">
+         <div id="video" class="mv player"></div>
+         <div class="mv-container">
+            <div class="hv-container">
+               <div class="holder-container">
+                  <div class="holder title kor">공연명</div>
+                  <div class="holder title eng">Title</div>
+               </div>
+               <div class="info-container">
+                  <div class="mv title kor">제목</div>
+                  <div class="mv title eng">Title</div>
+               </div>
+            </div>
+            <div class="hv-container">
+               <div class="holder-container">
+                  <div class="holder team kor">공연팀</div>
+                  <div class="holder team eng">Artist</div>
+               </div>
+               <div class="info-container">
+                  <div class="mv team kor">팀 이름</div>
+                  <div class="mv team eng">팀 이름</div>
+               </div>
+            </div>
+            <div class="hv-container">
+               <div class="holder-container">
+                  <div class="holder genre kor">주장르</div>
+                  <div class="holder genre eng">Main Genre</div>
+               </div>
+               <div class="info-container">
+                  <div class="mv genre kor">머시기</div>
+                  <div class="mv genre eng">SG</div>
+               </div>
+
+               <div class="holder-container">
+                  <div class="holder duration kor">상영 시간</div>
+                  <div class="holder duration eng">Run time</div>
+               </div>
+               <div class="info-container">
+                  <div class="mv duration">영상 길이</div>
+               </div>
+            </div>
+               
+
+         </div>
+         <div class="mv close icon-cancel" onclick="fadeOut(this.parentNode);"></div>
+      </div>
+      <div class="question">
+         <div class="quest title">질문 내용</div>
+         <div class="mv close icon-cancel" onclick="fadeOutQuest(this.parentNode);"></div>
+         <div class="quest selector"></div>
+      </div>
+   </div>
+   <script src="main.js"></script>
+</body>
+
+</html>
