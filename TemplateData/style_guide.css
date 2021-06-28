@@ -9,15 +9,16 @@ body { font-family: 'Noto Sans KR', sans-serif; padding: 0; margin: 0; backgroun
   font-size: 1.3rem;
 }
 
-.orientation {
-  margin-top: 10vh;
-}
-
 .link {
   margin-top: 20vh;
   font-weight: bold;
   font-size: 2rem;
   color: rgb(255, 224, 212);
+}
+
+.guide.icon-right-big {
+  display: block;
+  font-size: 3rem;
 }
 
 .browser {
