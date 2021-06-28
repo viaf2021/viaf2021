@@ -1,0 +1,52 @@
+body { font-family: 'Noto Sans KR', sans-serif; padding: 0; margin: 0; background: #000000;}
+
+/* Index page property*/
+.guide {    
+  user-select: none;
+  text-align: center;
+  margin-bottom: 30px;
+  color:white;
+  font-size: 1.3rem;
+}
+
+.orientation {
+  margin-top: 10vh;
+}
+
+.link {
+  margin-top: 20vh;
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgb(255, 224, 212);
+}
+
+.browser {
+  font-size: 0.7rem;
+  color: darkgray;
+}
+
+.intro-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  user-select: none;
+}
+
+.intro-container video {
+  min-width: 100%; 
+  min-height: 100%; 
+  user-select: none;
+  
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: 80%;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+

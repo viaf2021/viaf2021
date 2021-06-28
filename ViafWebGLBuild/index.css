@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  background: darkgray;  
+}
+
+#unity-canvas {
+  float: left;
+  width: 100vw;
+  height: 100vh;
+}
+
+#flower01 {  
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 500px;
+  height: 500px;
+  background: gray;
+  visibility: hidden;
+}

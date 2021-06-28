@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>VIA Festival 2021</title>
+   <link rel="shortcut icon" href="TemplateData/favicon.ico">
+   <link rel="stylesheet" href="TemplateData/style_guide.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <!-- <div class="intro-container">
+      <video class="intro-mov" src="video/Viaf_intro.mp4" autoplay muted controls></video>
+   </div> -->
+   <div class="guide link" onclick="clickStart()">
+      가상의 길 여정 시작하기
+   </div>
+   <div class="guide browser">
+      이 체험은 크롬 브라우저에 최적화 되어 있으며 와이파이 환경을 권장합니다. <br>
+   </div>
+   <!-- <div class="guide orientation">
+      “자! 이제 2021 비아페스티벌 가상의 길 여정을 시작해볼까요? <br>
+      꽃잎을 따라 가시노라면 세 가지 색상의, 세 종류의 꽃들을 만나게 됩니다. <br>
+      공연진이 정성껏 준비한 예술의 꽃들을 음미해 보세요. <br>
+      가로 화면으로 감상하시는 것을 권해드립니다!”
+   </div>
+   -->
+   <script>
+      var mazeLink = './webgl.html';
+      var guidesEl = document.querySelectorAll(".guide");
+      // var vidContainerEl = document.querySelector(".intro-container");
+      // var vidEl = document.querySelector(".intro-mov");
+
+      function clickStart() {
+         console.log("aaa");
+         guidesEl.forEach(el => {
+            el.classList.add("m-collapse");
+         });
+         playVid();
+      }
+
+      // 링크에서 이동시 사용
+      function playVid() {
+         var introContainerEl = document.createElement("div");
+         var vidEl = document.createElement("video");
+         introContainerEl.appendChild(vidEl);
+         introContainerEl.classList.add("intro-container");
+         vidEl.classList.add("intro-mov");
+         vidEl.src = "./video/Viaf_intro.mp4";
+
+         document.body.insertBefore(introContainerEl, guidesEl[0]);
+
+         // vidContainerEl.style.visibility = "visible";
+         vidEl.play();
+         vidEl.controls = "visible"
+         vidEl.addEventListener('ended', toMaze);
+      }
+
+      // 링크에서 이동 이외에 사용
+      // function playVid() {
+      //    console.log("playVideo");
+      //    var introContainerEl = document.querySelector(".intro-container");
+      //    var vidEl = document.createElement("video");
+      //    introContainerEl.appendChild(vidEl);
+      //    introContainerEl.classList.add("intro-container");
+      //    vidEl.classList.add("intro-mov");
+      //    document.body.insertBefore(introContainerEl);
+
+      //    vidEl.src = "./video/Viaf_intro.mp4";
+
+      //    vidEl.play();
+      //    vidEl.addEventListener('ended', toMaze);
+      // }
+      
+      // window.addEventListener('load', playVid);
+      // vidEl.addEventListener('ended', toMaze);
+      
+      function toMaze() {
+         window.location.replace(mazeLink);
+      }
+
+   </script>
+</body>
+
+</html>
