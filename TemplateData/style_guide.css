@@ -9,21 +9,30 @@ body { font-family: 'Noto Sans KR', sans-serif; padding: 0; margin: 0; backgroun
   font-size: 1.3rem;
 }
 
+.guide-container {
+  position:absolute;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
 .link {
-  margin-top: 20vh;
+  pointer-events: none;
+  position:absolute;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  height: 50%;
+  width: 50%;
+}
+
+.text {
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-58%, -55%);
   font-weight: bold;
-  font-size: 2rem;
-  color: rgb(255, 224, 212);
-}
-
-.guide.icon-right-big {
-  display: block;
-  font-size: 3rem;
-}
-
-.browser {
-  font-size: 0.7rem;
-  color: darkgray;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .intro-container {
@@ -51,3 +60,10 @@ body { font-family: 'Noto Sans KR', sans-serif; padding: 0; margin: 0; backgroun
   transform: translate(-50%,-50%);
 }
 
+.m-collapse {
+  pointer-events: none;
+  user-select: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}

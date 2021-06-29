@@ -153,8 +153,8 @@ playInfo = [{
       ]
    },
    {
-      "TitleKor": "ARIA - HELLEK - ASILE",
-      "TitleEng": "ARIA - HELLEK - ASILE",
+      "TitleKor": "아리아-헬렉-한 번 더?-요양원",
+      "TitleEng": "ARIA-HELLEK-One More?-ASILE",
       "TeamKor": "인-센소(프랑스)",
       "TeamEng": "in-SENSO",
       "Genre": "무용 Dance",
