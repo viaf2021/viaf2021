@@ -160,7 +160,7 @@ playInfo = [{
       "Genre": "무용 Dance",
       "Space": "실외 ",
       "Time": "00:04:36",
-      "PlaySrc": "bPAC_NVG8X4",
+      "PlaySrc": "7KxNq0a8LaI",
       "Staff": "출연: 오딜, ",
       "TeamInfo": "",
       "Info": ""
