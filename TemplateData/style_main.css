@@ -50,6 +50,10 @@ body { overflow: hidden; height: 95%; font-family: 'Noto Sans KR', sans-serif; p
   flex-direction: row;
 }
 
+.hv-container.footer {
+  justify-content: center;
+}
+
 .holder {  
   display: inline-block;
   text-align: right;
